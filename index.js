@@ -1,66 +1,114 @@
+// 1
+function checkScore(studentScore){
+   if (studentScore >= 180) {
+        console.log("Passed")
+    } else {
+        console.log("Failed")
+    }
+}
 
-var name = "Kingsley"
-var age = 29
-var nationality = "Nigerian"
+checkScore()
 
-// Output the embedded values in a sentence
-console.log(`I am a ${nationality} by name ${name}, i am ${age} years old.`)
+// 2
+function checkVotingAge(age){
+    if(age >= 18){
+        return "You are eligible to vote";
+    } else {
+        return "Not eligible";
+    }
+}
 
+console.log(checkVotingAge(17));
+console.log(checkVotingAge(21));
 
-var Quote ="The only thing we have to fear is fear itself";
-
-var upperCaseString = Quote.toUpperCase()
-console.log(upperCaseString) // Outputs the uppercase of the above sentence
-
-var Qword = "THE ONLY THING WE HAVE TO FEAR IS FEAR ITSELF"
-
-var lowerCaseString = Qword.toLowerCase()
-console.log(lowerCaseString) // Prints the lowercase 
-
-var word = "javascript";
-var reversedWord = word.split('').reverse().join('');
-console.log(reversedWord)  // outputs the reversed word
-
-var item1 = 10.99;
-var item2 = 5.50;
-var item3 = 20.00;
-
-var totalPrice = item1 + item2 + item3;
-
-console.log(`The total price of the items is $${totalPrice.toFixed(2)}.`) //Output the total price
-
-var test1 = 80;
-var test2 = 75;
-var test3 = 90;
-var test4 = 85;
-var test5 = 95;
-
-var average = (test1 + test2 + test3 + test4 + test5) / 5;
-console.log(`The average test score is ${average}.`);// Outputs the average test score
+// 3
+function studentGrade(name, score ){
+    if(score >= 90){
+        return "Excellent";
+    } else if (score >= 75){
+        return "Good";
+    } else if (score >= 50){
+        return "Average";
+    } else {
+        return "Fail"
+    }
+}
+ 
+console.log(studentGrade("kingsley", 78));
 
 
-var favoriteFoods = ["coconutRice", "whiteSoup", "jollofRice", "fishSoup", "iceCream"];
+// 4
+function checkAccess(hasID, isAbove18){
+    if(hasID && isAbove18) {
+        return "Access Granted";
+    } else {
+        return "Access Denied"
+    }
+}
 
-console.log(`First favorite food: ${favoriteFoods[0]}`); // Outputs the first item
-console.log(`Last favorite food: ${favoriteFoods[favoriteFoods.length - 1]}`); // Outputs the last item
-
-
-var favoriteFoods = ["coconutRice", "whiteSoup", "jollofRice", "fishSoup", "iceCream"];
-
-// Add one at the beginning
-favoriteFoods.unshift("noodles");
-
-// Add one at the end
-favoriteFoods.push("chickenPepperSoup");
-
-console.log("Updated favorite foods list:", favoriteFoods); //Output the result
+console.log(checkAccess(true, false));
 
 
-var jssOne = ["Ada", "Bola", "Chidi", "Damilola", "Emeka", "Fatima", "Grace", "Henry", "Ifeoma", "John"];
-console.log(jssOne);
+// 5
+const arrayOfStudentScores = [50, 70, 49, 55, 78, 95, 40];
 
-var jssTwo = ["Kemi", "Lekan", "Musa", "Ngozi", "Ola", "Peace", "Queen", "Rita", "Samuel", "Tunde"];
-console.log(jssTwo);
+for(let i = 0; i < arrayOfStudentScores.length; i++ ){
+    if (arrayOfStudentScores[i] > 50){
+        console.log("Pass");
+    } else {
+        console.log("Fail")
+    }
+}
+ 
 
-var jssThree = ["Uche", "Victoria", "Wale", "Xavier", "Yetunde", "Zainab", "Aisha", "Benson", "Cynthia", "David"];
-console.log(jssThree);
+// 6
+const passBoth = (math, english) => {
+    if (math >= 50 && english >= 50) {
+        return "Yes";
+    } else {
+        return "No"
+    }
+};
+
+console.log(passBoth(50, 40));
+console.log(passBoth(50, 70));
+
+
+// 7
+function checkUser(email, phoneNumber) {
+    if (email || phoneNumber) {
+        return "signUp allowed";
+    } else {
+        return "signUp denied: provide email or phoneNumber";
+    }
+}
+
+console.log(checkUser("king@yahoo.com", "098664333456"));
+console.log(checkUser("",));
+
+
+// 8
+function validLogin(username, password) {
+    if (!username || !password) {
+        return "Invalid input";
+    } else {
+        return "Login successful"
+    }
+}
+
+console.log(validLogin("kingsley", "pass009"))
+
+
+// 9
+function workStatus(hoursWorked) {
+    return hoursWorked >= 40 ? "Full-time" : "Part-Time";
+}
+
+console.log(workStatus(40));
+console.log(workStatus(35));
+
+
+// 10
+const getLarger = (a, b) => a > b ? a : b;
+    
+console.log(getLarger(10, 5));
