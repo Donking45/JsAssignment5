@@ -1,24 +1,35 @@
-# JS Practice Functions
+# Drug Inventory Utilities
 
-This repository contains a collection of basic JavaScript functions for practice. These exercises cover:
-- Conditional statements (`if`, `else`, `||`, `&&`)
-- Loops (`for`)
-- Arrow functions
-- Ternary operators
-- Input validation
+This repository contains JavaScript functions and operations for managing and querying a drug inventory system. It uses a predefined array of drug objects with properties like name, category, dosage, stock, and manufacturer.
 
 
-## Functions Included
+## Features
 
-1. **checkScore(score)** – Logs `"Passed"` if score ≥ 180, else `"Failed"`.
-2. **checkVotingAge(age)** – Returns voting eligibility based on age.
-3. **studentGrade(name, score)** – Returns a message with a grade: Excellent, Good, Average, or Fail.
-4. **checkAccess(hasID, isAbove18)** – Returns `"Access granted"` only if both conditions are true.
-5. **Loop through scores** – Uses a `for` loop to log `"Pass"` or `"Fail"` for student scores.
-6. **passBoth(math, english)** – Returns `"Yes"` if both scores ≥ 50.
-7. **checkUser(email, phone)** – Checks if a user has at least one contact method.
-8. **validLogin(username, password)** – Returns `"Invalid input"` if either field is empty.
-9. **workStatus(hoursWorked)** – Returns `"Full-time"` or `"Part-time"` using a ternary operator.
-10. **getLarger(a, b)** – Returns the larger of two numbers.
+- List all drug name- Filter drugs by category
+- Get drugs that require or don’t require prescriptions
+- Find drugs with low stock
+- Format drug names and dosages
+- Count drugs by manufacturer
+- List manufacturer names alongside drug names
+- Get drug names in lowercase
 
 
+## Sample Data
+
+The dataset includes 20 different drugs with details like:
+- `name`: Name of the drug
+- `category`: Drug category (e.g., Analgesic, Antibiotic)
+- `dosageMg`: Dosage in milligrams
+- `isPrescriptionOnly`: Boolean flag for prescription requirement
+- `stock`: Available stock
+- `manufacturer`: Drug manufacturer
+
+
+## How to Use
+
+Just include the `drugs` array and the related functions in your JavaScript file or script environment, and call them as needed:
+
+
+```javascript
+console.log(getDrugsByCategory("Antibiotic"));
+console.log(countDrugsByManufacturer("GSK"));
