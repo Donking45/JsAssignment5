@@ -33,8 +33,17 @@ drugs.forEach(function(drug) {
     }
 })
 
+
 // 2. Return an array of drug names in lowercase
 
+const lowerCaseArray = drugs.map(drug => ({
+    ...drug,
+    name: drug.name.toLowerCase()
+    }))
+
+console.log(lowerCaseArray)
+
+/*
 // Creates new array of drugs converted to lowercase
 let convertedNames = drugs.map(drug =>
     drug.name.toLowerCase()
@@ -42,6 +51,7 @@ let convertedNames = drugs.map(drug =>
 
 // Prints lowercase names
 console.log(convertedNames)
+*/
 
 // 3. Write a function that accepts a category and returns 
 // all drugs under that category
